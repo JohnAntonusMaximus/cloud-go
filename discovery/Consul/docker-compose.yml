@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  consul:
+    image: consul:0.8.3
+    ports:
+      - "8300:8300"
+      - "8400:8400"
+      - "8500:8500"
+    networks: 
+      - sky-net 
+  
+  simple-service:
+    build: 
+      context: .
+      dockerfile: server/Dockerfile
+
+networks:
+  sky-net:
+    driver: bridge
