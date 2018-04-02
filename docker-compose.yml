@@ -13,7 +13,7 @@ services:
   simple-server:
     build: 
       context: .
-      dockerfile: server/Dockerfile
+      dockerfile: ./Dockerfile
     image: simple-server:1.0.1
     environment: 
       - CONSUL_HTTP_ADDR=consul:8500
