@@ -8,5 +8,5 @@ COPY . ${SOURCES}
 RUN cd ${SOURCES} && CGO_ENABLED=0 go build 
 
 WORKDIR ${SOURCES}
-CMD ${SOURCES}/discovery/Consul/server/server
+CMD ${SOURCES}server
 EXPOSE 8080
